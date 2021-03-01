@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Kherindo</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- kherindo -->
+    <string name="kherin_title">Kherindo</string>
+    <string name="welcome_title">Welcome</string>
+    <string name="welcome_fragment_label">Welcome Fragment</string>
+    <string name="signin_button_label">Sign In</string>
+    <string name="signin_fragment_label">Sign In Fragment</string>
+    <string name="register_button_label">Register</string>
+    <string name="register_fragment_label">Register Fragment</string>
+
+    <!-- sign in -->
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <!-- register -->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
