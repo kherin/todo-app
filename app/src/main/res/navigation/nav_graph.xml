@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/RegisterFragment"
-        android:name="com.example.myapplication.fragments.SignInFragment"
+        android:name="com.example.myapplication.fragments.RegisterFragment"
         tools:layout="@layout/fragment_register">
 
     </fragment>
