@@ -1,55 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/register_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragments.RegisterFragment">
+    android:backgroundTint="@color/white"
+    >
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Register"
-            android:textColor="#2196F3"
-            android:textSize="36sp"></TextView>
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:gravity="left"
+        android:padding="20dp"
+        android:text="New Task"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="10dp"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:orientation="vertical"
         android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:orientation="vertical">
             >
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/email_textInputLayout"
+                android:id="@+id/title_textInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:hint="@string/email_hint"
-                app:errorEnabled="true"
-                app:errorTextAppearance="@style/email_format_error_txt">
+                android:hint="@string/new_task_title_hint">
 
-
-                <!-- email -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email_textInputEditText"
                     android:layout_width="match_parent"
@@ -57,34 +45,18 @@
                     android:paddingLeft="20sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- password -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_textInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="@string/password_hint">
+                android:hint="@string/new_task_notes_hint">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/password_textInputEditText"
-                    android:inputType="textPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!-- confirm password -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/confirm_password_textInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="@string/confirm_password_hint">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/confirm_password_textInputEditText"
-                    android:inputType="textPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -96,15 +68,14 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button_register"
+                android:id="@+id/button_new_task"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/primary"
                 android:padding="20dp"
-                android:text="@string/register_button_label"
+                android:text="@string/new_task_button_label"
                 android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

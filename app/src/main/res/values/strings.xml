@@ -12,15 +12,22 @@
     <string name="kherin_title">Kherindo</string>
     <string name="welcome_title">Welcome</string>
     <string name="welcome_fragment_label">Welcome Fragment</string>
-    <string name="signin_button_label">Sign In</string>
-    <string name="signin_fragment_label">Sign In Fragment</string>
-    <string name="register_button_label">Register</string>
-    <string name="register_fragment_label">Register Fragment</string>
 
     <!-- sign in -->
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="signin_button_label">Sign In</string>
+    <string name="signin_fragment_label">Sign In Fragment</string>
+
     <!-- register -->
+    <string name="register_button_label">Register</string>
+    <string name="register_fragment_label">Register Fragment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- new task -->
+    <string name="new_task_title_hint">Title</string>
+    <string name="new_task_notes_hint">Notes</string>
+    <string name="new_task_button_label">Add</string>
 </resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "66556736032",
+    "project_id": "kherindo",
+    "storage_bucket": "kherindo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66556736032:android:5e895a3364a34747488245",
+        "android_client_info": {
+          "package_name": "com.example.kherindo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66556736032-o1vi3sra1f3j8b4fdcqnq0au6gci9esg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1-1xgTqcQqSGApPPrKg6ScoOkQGm-kTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66556736032-o1vi3sra1f3j8b4fdcqnq0au6gci9esg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

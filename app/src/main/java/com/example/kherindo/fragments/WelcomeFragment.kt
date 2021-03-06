@@ -1,4 +1,4 @@
-package com.example.myapplication.fragments
+package com.example.kherindo.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
-import com.example.myapplication.R
+import com.example.kherindo.R
+
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
