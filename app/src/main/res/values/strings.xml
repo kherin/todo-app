@@ -30,4 +30,8 @@
     <string name="new_task_title_hint">Title</string>
     <string name="new_task_notes_hint">Notes</string>
     <string name="new_task_button_label">Add</string>
+    <string name="cancel_button_label">Cancel</string>
+
+    <!-- progress bar -->
+    <string name="signin_loading_text">Loading...</string>
 </resources>

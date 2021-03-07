@@ -1,5 +1,6 @@
 package com.example.kherindo.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -13,7 +14,11 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.kherindo.R
 import com.example.kherindo.utils.Validations
+import com.github.razir.progressbutton.bindProgressButton
+import com.github.razir.progressbutton.hideProgress
+import com.github.razir.progressbutton.showProgress
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.AuthResult
@@ -26,11 +31,8 @@ class SignInFragment : Fragment() {
 
     lateinit var emailEditTextField: TextInputEditText;
     lateinit var passwordEditTextField: TextInputEditText;
+    lateinit var signInButton: MaterialButton
     private lateinit var auth: FirebaseAuth
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,8 +45,10 @@ class SignInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.button_signin).setOnClickListener {
+        this.signInButton = view.findViewById<MaterialButton>(R.id.login_button)
 
+        bindProgressButton(signInButton)
+        signInButton.setOnClickListener {
             // email
             emailEditTextField = view.findViewById(R.id.email_textInputEditText)
             val emailTextValue: String = emailEditTextField.text.toString()
@@ -62,11 +66,16 @@ class SignInFragment : Fragment() {
             if (isEmailValid && isPasswordValid) {
                 signIn(view, emailTextValue, passwordTextValue)
             }
-
         }
     }
 
     private fun signIn(view: View, email: String, password: String) {
+        // show progress indicator
+        signInButton.showProgress {
+            buttonTextRes = R.string.signin_loading_text
+            progressColor = Color.WHITE
+        }
+
         auth = FirebaseAuth.getInstance()
         val contextView = view.findViewById<View>(R.id.signin_layout)
         auth.signInWithEmailAndPassword(email, password)
@@ -83,6 +92,8 @@ class SignInFragment : Fragment() {
                     Snackbar.make(contextView, "Authentication Failed", Snackbar.LENGTH_SHORT)
                         .show()
                 }
+
+                signInButton.hideProgress()
             }
     }
 }
