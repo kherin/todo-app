@@ -34,4 +34,7 @@
 
     <!-- progress bar -->
     <string name="signin_loading_text">Loading...</string>
+
+    <!-- todo list -->
+    <string name="filter_todo_hint">Search</string>
 </resources>
